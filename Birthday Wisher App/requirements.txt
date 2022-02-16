@@ -1,0 +1,28 @@
+1. Install a few modules which will help this program to run, such as pandas, openpyxl etc.
+Run the following commands:
+"pip install pandas"
+"pip install openpyxl"
+
+
+2. On line 5, enter the project directory.
+For example:
+os.chdir(r"C:\Desktop\Birthday Wisher App")
+
+
+3. On line 8 and 9, enter your email authentication details. Make sure access for less secure apps setting has been turned on for the email you provide.
+
+
+4. In birthday-data.xlsx file, add sample email addresses in "Email" field.
+
+
+5. To schedule the program you need to do the following:
+-We need to create a task in task scheduler which will run our main.py file on 12:00 am everyday so that it can check and wish the person on their respective birthday.
+-Open the task scheduler.
+-Click on create a task.
+-In the General tab, add Name and Description(optional).
+-Go to Triggers tab. Click on New. Choose Daily in the settings and set time as 00:00:00 (for 12 am).
+-Go to Action tab. Click on New. In Program/script field, click Browse and choose python.exe by browsing (for e.g., C:\Users\Programs\Python\python.exe). In Add arguments field, paste the path of the main.py file within double quotes(for e.g. "C:\Desktop\Birthday Wisher App\main.py").
+-In Settings tab, check Run task as soon as possibleafter a scheduledstart is missed.
+-Now press Ok and exit.
+
+The program is now ready to run.
